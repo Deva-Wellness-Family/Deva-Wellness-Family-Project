@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkdeva_wellness_family=globalThis.webpackChunkdeva_wellness_family||[]).push([[488],{488(e,a,l){new WeakMap;new Set}}]);
+//# sourceMappingURL=488.89ea397f.chunk.js.map
