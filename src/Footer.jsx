@@ -80,7 +80,7 @@ function Footer({ setPage }) {
               📍 shop no -104  second floor Ideal Avenue/opp Gandharva Excellence phase 1 Moshi 412105
             </p>
             <p style={styles.contactText}>📧 info@fitclub.com</p>
-            <p style={styles.contactText}>📞 +91 7709966357</p>
+            <p style={styles.contactText}>📞 +91 7387428839</p>
           </div>
 
         </div>
