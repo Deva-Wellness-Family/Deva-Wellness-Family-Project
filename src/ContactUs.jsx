@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 
 function ContactUs() {
   return (
-    <div style={styles.page}>
+    <div className="ContactPage" style={styles.page}>
       {/* HEADER */}
-      <div style={styles.header}>
+      <div className="header" style={styles.header}>
         <motion.h1
+          className="title"
           style={styles.title}
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -15,6 +16,7 @@ function ContactUs() {
           Contact Us
         </motion.h1>
         <motion.p
+          className="subtitle"
           style={styles.subtitle}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -25,7 +27,7 @@ function ContactUs() {
       </div>
 
       {/* CONTENT */}
-      <div style={styles.container}>
+      <div className="container" style={styles.container}>
         {/* CONTACT INFO */}
         <motion.div
           style={styles.card}
@@ -44,6 +46,7 @@ function ContactUs() {
           ].map((item, idx) => (
             <motion.div
               key={idx}
+              className="infoItem"
               style={styles.infoItem}
               initial={{ x: -20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -59,6 +62,7 @@ function ContactUs() {
 
         {/* CONTACT FORM */}
         <motion.div
+          className="card"
           style={styles.card}
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

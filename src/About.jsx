@@ -26,16 +26,17 @@ function About() {
   }, [images.length]);
 
   return (
-    <div style={styles.container}>
+    <div className="AboutPage" style={styles.container}>
       {/* HERO SECTION */}
       <motion.section
+        className="hero"
         style={styles.hero}
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div style={styles.heroContent}>
-          <h1 style={styles.title}>About DEVA WELLNESS FAMILY</h1>
+        <div className="heroContent" style={styles.heroContent}>
+          <h1 className="title" style={styles.title}>About DEVA WELLNESS FAMILY</h1>
           <p style={styles.text}>
             Deva Wellness & Fitness Family is a premier fitness center dedicated
             to helping individuals transform their lives through effective,
@@ -48,13 +49,13 @@ function About() {
           </p>
         </div>
 
-        <motion.div style={styles.heroImage} whileHover={{ scale: 1.05 }}>
+        <motion.div className="heroImage" style={styles.heroImage} whileHover={{ scale: 1.05 }}>
           <img src={images[currentIndex]} alt="About Us" style={styles.image} />
         </motion.div>
       </motion.section>
 
       {/* MISSION & VISION */}
-      <section style={styles.missionVisionSection}>
+      <section className="missionVisionSection" style={styles.missionVisionSection}>
         {["mission", "vision"].map((item, index) => (
           <motion.div
             key={item}
@@ -91,12 +92,13 @@ function About() {
 
       {/* TRAINER SECTION */}
       <motion.section
+        className="trainerSection"
         style={styles.trainerSection}
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 style={styles.sectionTitle}>Meet Our Expert Trainer</h2>
+        <h2 className="sectionTitle" style={styles.sectionTitle}>Meet Our Expert Trainer</h2>
 
         <div style={styles.trainerWrapper}>
           {/* IMAGE LEFT */}
@@ -137,6 +139,7 @@ function About() {
 
       {/* CONTACT SECTION */}
       <motion.section
+        className="contactSection"
         style={styles.contactSection}
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -144,7 +147,7 @@ function About() {
       >
         <h2 style={styles.sectionTitle}>Get In Touch</h2>
 
-        <div style={styles.contactRow}>
+        <div className="contactRow" style={styles.contactRow}>
           {[
             {
               icon: <FaPhoneAlt />,

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./App.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 import a12 from "./Images/a12.jpg";
 import h1 from "./Images/h1.jpeg";
 import g11 from "./Images/g11.jpeg";
@@ -61,7 +63,7 @@ function App() {
   const videos = [shiv, shiv1, newVideo];
 
   return (
-    <div style={styles.app}>
+    <div className="App" style={styles.app}>
       {/* NAVBAR */}
       <nav style={{ ...styles.navbar, top: showNav ? "0" : "-65px" }}>
         <img
@@ -70,10 +72,11 @@ function App() {
           style={styles.logoImage}
           onClick={() => handleMenuClick("home")}
         />
-        <ul style={styles.menuDesktop}>
+        <ul className="menuDesktop" style={styles.menuDesktop}>
           {menuItems.map((item) => (
             <li key={item.key}>
               <button
+                className="linkBtn"
                 style={{
                   ...styles.linkBtn,
                   color: page === item.key ? "#000" : "#fff",
@@ -99,7 +102,7 @@ function App() {
       {page === "home" && (
         <>
           {/* HERO SECTION WITH SLIDESHOW */}
-          <section style={styles.hero}>
+          <section className="hero" style={styles.hero}>
             {/* SLIDESHOW BACKGROUND */}
             <AnimatePresence mode="wait">
               <motion.div
@@ -116,8 +119,8 @@ function App() {
             </AnimatePresence>
 
             {/* HERO CONTENT */}
-            <div style={styles.heroContent}>
-              <div style={styles.heroTextWrapper}>
+            <div className="heroContent" style={styles.heroContent}>
+              <div className="heroTextWrapper" style={styles.heroTextWrapper}>
                 <h1>
                   <div style={styles.marqueeText}>
                     <span style={{ color: "#fff" }}>Build Your </span>
@@ -125,10 +128,10 @@ function App() {
                   </div>
                 </h1>
               </div>
-              <p style={styles.highlightText}>
+              <p className="highlightText" style={styles.highlightText}>
                 Workout • Nutrition • Results
               </p>
-              <div style={styles.heroButtons}>
+              <div className="heroButtons" style={styles.heroButtons}>
                 <motion.button
                   style={styles.heroBtn}
                   whileHover={{
@@ -206,6 +209,7 @@ function App() {
 
           {/* VIDEO SECTION */}
           <motion.section
+            className="videoSection"
             style={styles.videoSection}
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -213,7 +217,7 @@ function App() {
             viewport={{ once: true }}
           >
             <h2 style={styles.videoTitle}>WORKOUT VIDEOS</h2>
-            <div style={styles.videoGrid}>
+            <div className="videoGrid" style={styles.videoGrid}>
               {videos.map((vid, index) => (
                 <motion.div
                   key={index}
@@ -258,6 +262,17 @@ function App() {
           </div>
         </div>
       )}
+
+      <motion.button
+        className="whatsappButton"
+        style={styles.whatsappButton}
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.96 }}
+        onClick={() => window.open("https://wa.me/917387428839", "_blank")}
+        aria-label="Open WhatsApp Chat"
+      >
+        <FaWhatsapp style={styles.whatsappIcon} />
+      </motion.button>
 
       <Footer setPage={setPage} />
     </div>
@@ -424,6 +439,29 @@ const styles = {
     cursor: "pointer",
     color: "#fff",
     fontWeight: "bold",
+  },
+
+  whatsappButton: {
+    position: "fixed",
+    right: "24px",
+    bottom: "24px",
+    zIndex: 1500,
+    width: "56px",
+    height: "56px",
+    borderRadius: "50%",
+    border: "none",
+    background: "linear-gradient(135deg, #25D366, #128C7E)",
+    color: "#fff",
+    cursor: "pointer",
+    boxShadow: "0 18px 40px rgba(18, 140, 126, 0.3)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    transition: "transform 0.2s ease, box-shadow 0.2s ease",
+  },
+
+  whatsappIcon: {
+    fontSize: "24px",
   },
 };
 

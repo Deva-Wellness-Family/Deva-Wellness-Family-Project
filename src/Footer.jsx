@@ -1,15 +1,24 @@
 import React from "react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 function Footer({ setPage }) {
   return (
-    <>
+    <div className="FooterPage">
       {/* CTA STRIP */}
-      <div style={styles.ctaBar}>
+      <div className="ctaBar" style={styles.ctaBar}>
         <h2 style={styles.ctaText}>
           Get a 3-day Free Membership Trial
         </h2>
 
        <button
+         className="ctaButton"
          style={styles.ctaButton}
          onClick={() => setPage("getStarted")}
 >        Register Now
@@ -17,11 +26,11 @@ function Footer({ setPage }) {
       </div>
 
       {/* MAIN FOOTER */}
-      <footer style={styles.footer}>
-        <div style={styles.topSection}>
+      <footer className="FooterMain" style={styles.footer}>
+        <div className="topSection" style={styles.topSection}>
           
           {/* BRAND */}
-          <div style={styles.column}>
+          <div className="column" style={styles.column}>
             <h2 style={styles.logo}>
               Deva <span style={{ color: "#ffc107" }}>Wellness</span>
             </h2>
@@ -31,16 +40,40 @@ function Footer({ setPage }) {
               your limits.
             </p>
 
-            <div style={styles.socialContainer}>
-              <span style={styles.social}>📘</span>
-              <span style={styles.social}>📸</span>
-              <span style={styles.social}>▶️</span>
-              <span style={styles.social}>🐦</span>
+            <div className="socialContainer" style={styles.socialContainer}>
+              {[
+                {
+                  icon: <FaFacebookF />,
+                  url: "https://www.facebook.com/share/1CxMjJbKMd/",
+                  label: "Facebook",
+                },
+                {
+                  icon: <FaInstagram />,
+                  url: "https://www.instagram.com/fitness_coach.vidya123",
+                  label: "Instagram",
+                },
+                {
+                  icon: <FaWhatsapp />,
+                  url: "https://wa.me/917387428839",
+                  label: "WhatsApp",
+                },
+              ].map((item) => (
+                <a
+                  key={item.label}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={styles.socialLink}
+                  aria-label={item.label}
+                >
+                  {item.icon}
+                </a>
+              ))}
             </div>
           </div>
 
           {/* WHY US */}
-          <div style={styles.column}>
+          <div className="column" style={styles.column}>
             <h3 style={styles.heading}>WHY DEVA WELLNESS?</h3>
             <h2 style={styles.tagline}>Small Steps, Big Changes</h2>
             <p style={styles.description}>
@@ -50,7 +83,7 @@ function Footer({ setPage }) {
           </div>
 
           {/* QUICK LINKS */}
-          <div style={styles.column}>
+          <div className="column" style={styles.column}>
             <h3 style={styles.heading}>QUICK LINKS</h3>
             <ul style={styles.linkList}>
               {[
@@ -74,13 +107,26 @@ function Footer({ setPage }) {
           </div>
 
           {/* CONTACT */}
-          <div style={styles.column}>
+          <div className="column" style={styles.column}>
             <h3 style={styles.heading}>CONTACT US</h3>
-            <p style={styles.contactText}>
-              📍 shop no -104  second floor Ideal Avenue/opp Gandharva Excellence phase 1 Moshi 412105
-            </p>
-            <p style={styles.contactText}>📧 info@fitclub.com</p>
-            <p style={styles.contactText}>📞 +91 7387428839</p>
+            <div style={styles.contactItem}>
+              <FaMapMarkerAlt style={styles.contactIcon} />
+              <p style={styles.contactText}>
+                shop no -104 second floor Ideal Avenue / opp Gandharva Excellence phase 1 Moshi 412105
+              </p>
+            </div>
+            <div style={styles.contactItem}>
+              <FaEnvelope style={styles.contactIcon} />
+              <a href="mailto:info@fitclub.com" style={styles.contactLink}>
+                info@fitclub.com
+              </a>
+            </div>
+            <div style={styles.contactItem}>
+              <FaPhoneAlt style={styles.contactIcon} />
+              <a href="tel:+917387428839" style={styles.contactLink}>
+                +91 7387428839
+              </a>
+            </div>
           </div>
 
         </div>
@@ -90,7 +136,7 @@ function Footer({ setPage }) {
           © 2026 Deva Wellness Family. All Rights Reserved.
         </div>
       </footer>
-    </>
+    </div>
   );
 }
 
@@ -181,13 +227,43 @@ const styles = {
 
   socialContainer: {
     display: "flex",
-    gap: "16px",
-    fontSize: "22px",
+    gap: "14px",
     marginTop: "12px",
+    flexWrap: "wrap",
   },
 
-  social: {
-    cursor: "pointer",
+  socialLink: {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "42px",
+    height: "42px",
+    borderRadius: "50%",
+    backgroundColor: "#1f1f1f",
+    color: "#fff",
+    textDecoration: "none",
+    boxShadow: "0 6px 18px rgba(0,0,0,0.22)",
+    transition: "transform 0.2s ease, background-color 0.2s ease",
+  },
+
+  contactItem: {
+    display: "flex",
+    alignItems: "flex-start",
+    gap: "12px",
+    marginBottom: "14px",
+  },
+
+  contactIcon: {
+    color: "#ffc107",
+    marginTop: "4px",
+    minWidth: "20px",
+  },
+
+  contactLink: {
+    fontSize: "14px",
+    color: "#bbb",
+    lineHeight: "1.7",
+    textDecoration: "none",
   },
 
   bottomSection: {
