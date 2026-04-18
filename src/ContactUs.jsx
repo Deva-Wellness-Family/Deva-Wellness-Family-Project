@@ -41,8 +41,8 @@ function ContactUs() {
 
           {[
             { icon: "🏠", text: "Shop no -104  second floor Ideal Avenue/opp Gandharva Excellence phase 1 Moshi 412105" },
-            { icon: "📧", text: <a href="mailto:info@fitclub.com" style={styles.link}>info@fitclub.com</a> },
-            { icon: "📞", text: <a href="tel:+917387428839" style={styles.link}>+91 7387428839</a> },
+            { icon: "📧", text: <a href="mailto:devawellnessfamily@gmail.com" style={styles.link}>info@fitclub.com</a> },
+            { icon: "📞", text: <a href="tel:+917387428839" style={styles.link}>+91 9527476312</a> },
           ].map((item, idx) => (
             <motion.div
               key={idx}
