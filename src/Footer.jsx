@@ -54,7 +54,7 @@ function Footer({ setPage }) {
                 },
                 {
                   icon: <FaWhatsapp />,
-                  url: "https://wa.me/917387428839",
+                  url: "https://wa.me/919527476312",
                   label: "WhatsApp",
                 },
               ].map((item) => (
@@ -117,14 +117,14 @@ function Footer({ setPage }) {
             </div>
             <div style={styles.contactItem}>
               <FaEnvelope style={styles.contactIcon} />
-              <a href="mailto:info@fitclub.com" style={styles.contactLink}>
-                info@fitclub.com
+              <a href="mailto:devawellnessfamily@gmail.com" style={styles.contactLink}>
+                devawellnessfamily@gmail.com
               </a>
             </div>
             <div style={styles.contactItem}>
               <FaPhoneAlt style={styles.contactIcon} />
               <a href="tel:+917387428839" style={styles.contactLink}>
-                +91 7387428839
+                +91 9527476312
               </a>
             </div>
           </div>

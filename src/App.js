@@ -268,7 +268,7 @@ function App() {
         style={styles.whatsappButton}
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.96 }}
-        onClick={() => window.open("https://wa.me/917387428839", "_blank")}
+        onClick={() => window.open("https://wa.me/919527476312", "_blank")}
         aria-label="Open WhatsApp Chat"
       >
         <FaWhatsapp style={styles.whatsappIcon} />

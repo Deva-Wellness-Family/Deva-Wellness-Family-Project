@@ -151,17 +151,17 @@ function About() {
           {[
             {
               icon: <FaPhoneAlt />,
-              link: "tel:+917387428839",
+              link: "tel:+919527476312",
               color: "#4CAF50",
             },
             {
               icon: <FaWhatsapp />,
-              link: "https://wa.me/917387428839",
+              link: "https://wa.me/919527476312",
               color: "#25D366",
             },
             {
               icon: <FaEnvelope />,
-              link: "mailto:info@fitclub.com",
+              link: "mailto:devawellnessfamily@gmail.com",
               color: "#D44638",
             },
             {
