@@ -6,7 +6,6 @@ import a12 from "./Images/a12.jpg";
 import h1 from "./Images/h1.jpeg";
 import g11 from "./Images/g11.jpeg";
 import v1 from "./Images/v1.mp4";
-import shiv from "./Images/shiv.mp4";
 import video4 from "./Images/Video4.mp4";
 import shiv1 from "./Images/shiv1.mp4";
 import newVideo from "./Images/new.mp4";
