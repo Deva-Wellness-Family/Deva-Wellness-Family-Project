@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"; // Video import fixed
+import React, { useState, useEffect } from "react"; // Video import fixed - 2025
 import "./App.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
