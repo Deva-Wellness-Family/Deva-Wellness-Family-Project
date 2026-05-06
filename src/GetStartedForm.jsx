@@ -88,9 +88,10 @@ function GetStartedForm() {
             style={{ ...styles.input, gridColumn: "1 / 2" }}
           >
             <option value="">Select Batch</option>
-            <option value="Morning">Morning (6 AM - 8 AM)</option>
-            <option value="Afternoon">Afternoon (12 PM - 2 PM)</option>
-            <option value="Evening">Evening (5 PM - 7 PM)</option>
+            <option value="Morning 5:00-6:00">Morning (5:00 AM - 6:00 AM)</option>
+            <option value="Morning 6:00-7:00">Morning (6:00 AM - 7:00 AM)</option>
+            <option value="Morning 7:30-8:30">Morning (7:30 AM - 8:30 AM)</option>
+            <option value="Evening 5:00-6:00">Evening (5:00 PM - 6:00 PM)</option>
           </select>
 
           <select
