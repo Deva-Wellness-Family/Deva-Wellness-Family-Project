@@ -7,6 +7,7 @@ import h1 from "./Images/h1.jpeg";
 import g11 from "./Images/g11.jpeg";
 import v1 from "./Images/v1.mp4";
 import shiv from "./Images/shiv.mp4";
+import video4 from "./Images/Video4.mp4";
 import shiv1 from "./Images/shiv1.mp4";
 import newVideo from "./Images/new.mp4";
 import Gallery from "./Gallery";
@@ -60,7 +61,7 @@ function App() {
     setPage(key);
   };
 
-  const videos = [shiv, shiv1, newVideo];
+  const videos = [video4, shiv1, newVideo];
 
   return (
     <div className="App" style={styles.app}>
